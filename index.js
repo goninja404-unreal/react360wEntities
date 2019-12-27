@@ -3,13 +3,26 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  asset,
   View
 } from 'react-360';
+import Entity from 'Entity';
 import ModelOne from './modelOne';
 import Sphere from './sphere';
 
 
 export default class hello360 extends React.Component {
+  render() {
+    return (
+      <Entity source={{ 
+        obj: asset('boy/boy.obj'),
+        mtl: asset('boy/boy.mtl')
+      }} />
+    );
+  }
+};
+
+export class hey360 extends React.Component {
   render() {
     return (
       <View style={styles.panel}>
@@ -22,7 +35,6 @@ export default class hello360 extends React.Component {
     );
   }
 };
-
 
 const styles = StyleSheet.create({
   panel: {
@@ -45,5 +57,6 @@ const styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('hello360', () => hello360);
+AppRegistry.registerComponent('hey360', () => hey360);
 AppRegistry.registerComponent('ModelOne', () => ModelOne);
 AppRegistry.registerComponent('Sphere', () => Sphere);
