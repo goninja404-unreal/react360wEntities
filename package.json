@@ -7,6 +7,7 @@
     "bundle": "node node_modules/react-360/scripts/bundle.js && sh scripts/copy-assets.sh",
     "open": "node -e \"require('xopen')('http://localhost:8081/index.html')\"",
     "devtools": "react-devtools",
+    "copy2docs": "sh scripts/copy2docs.sh",
     "deploy": "node scripts/deploy.js",
     "test": "jest"
   },
