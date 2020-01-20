@@ -13,58 +13,41 @@ function init(bundle, parent, options = {}) {
     ...options,
   });
 
-  const location1 = new Location([-1, -1, -2], [0, 0, Math.PI / 2]);
-
-  const location2 = new Location([-1, 1, -2], [0, 0, 0]);
-
+   const location0 = r360.getDefaultLocation();
 
   // Render your app content to the default cylinder surface
 
 
   r360.renderToSurface(
-    r360.createRoot('hey360', { /* initial props */ }),
+    r360.createRoot('hey360', { /* initial props surface*/ }),
     r360.getDefaultSurface()
   );
 
 
-  r360.renderToLocation(
-    r360.createRoot('hello360', { /* initial props */ }),
-    r360.getDefaultLocation()
-  );
+r360.detachRoot(location0);
+myboy= r360.renderToLocation(
+    r360.createRoot('hello360', { /* initial props boy */ }),
+    location0
+      );
+  myboy.Location= new Location([-4,0,0],[0,0,0]);
 
-  //  Render a CUBE (surface)
-    const cubeSurface = new Surface(
-      SIZE,
-      SIZE,
-      Surface.SurfaceShape.Flat,
-    );
 
   // Render a sphere (surface)
-
   const sphereSurface = new Surface(
     SIZE,
     SIZE,
     Surface.SurfaceShape.Flat,
   );
   sphereSurface.setAngle (0,0);
-
   r360.renderToSurface(
     r360.createRoot('Info', { name: 'Sphere' }),
     sphereSurface,
   );
-
-  // Render a sphere (3D entity )
     r360.renderToLocation(
       r360.createRoot('Sphere'),
-      r360.getDefaultLocation(),
+      r360.getDefaultLocation()
     );
   
-  // Render boy (3D entity from poly licence mit)
-  r360.renderToLocation(
-    r360.createRoot('ModelOne'),
-    location1
-  );
-
   // Load the initial environment
   r360.compositor.setBackground(r360.getAssetURL('360_world.jpg'));
 }

@@ -17,7 +17,14 @@ export default class hello360 extends React.Component {
       <Entity source={{ 
         obj: asset('boy/boy.obj'),
         mtl: asset('boy/boy.mtl')
-      }} />
+      }}
+      style={{transform:[
+        {translate: [-9.5, -5, -9.5]},
+        { scaleX: 0.7 },
+        { scaleY: 0.7 },
+        { scaleZ: 0.7 },
+        ]}}
+         />
     );
   }
 };
@@ -28,7 +35,7 @@ export class hey360 extends React.Component {
       <View style={styles.panel}>
         <View style={styles.greetingBox}>
           <Text style={styles.greeting}>
-            welcome
+            this is a great welcome
           </Text>
         </View>
       </View>
