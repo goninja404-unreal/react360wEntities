@@ -11,7 +11,29 @@ import ModelOne from './modelOne';
 import Sphere from './sphere';
 
 
-export default class hello360 extends React.Component {
+export default class table extends React.Component {
+  render() {
+    return (
+      <Entity source={{ 
+        obj: asset('table/table.obj'),
+        mtl: asset('table/table.mtl')
+      }}
+      style={{transform:[
+        {translate: [-3, -3.5, -1]},
+        { scaleX: 1.4 },
+        { scaleY: 1.4 },
+        { scaleZ: 1.4 },
+        { rotateX: Math.PI * 2 },
+        { rotateY: 1.5 },
+        { rotateZ: 1.5 },
+        ]}}
+         />
+    );
+  }
+};
+
+
+export  class boy1 extends React.Component {
   render() {
     return (
       <Entity source={{ 
@@ -19,15 +41,93 @@ export default class hello360 extends React.Component {
         mtl: asset('boy/boy.mtl')
       }}
       style={{transform:[
-        {translate: [-9.5, -5, -9.5]},
-        { scaleX: 0.7 },
-        { scaleY: 0.7 },
-        { scaleZ: 0.7 },
+        {translate: [-9.5, -5, -8.5]},
+        { scaleX: 1.5 },
+        { scaleY: 1.5 },
+        { scaleZ: 1.5 },
         ]}}
          />
     );
   }
 };
+
+
+export class boy2 extends React.Component {
+  render() {
+    return (
+      <Entity source={{ 
+        obj: asset('boy/boy.obj'),
+        mtl: asset('boy/boy.mtl')
+      }}
+      style={{transform:[
+        {translate: [-5.5, -5, -8.5]},
+        { scaleX: 1.5 },
+        { scaleY: 1.5 },
+        { scaleZ: 1.5 },
+        ]}}
+         />
+    );
+  }
+};
+
+export class boy3 extends React.Component {
+  render() {
+    return (
+      <Entity source={{ 
+        obj: asset('boy/boy.obj'),
+        mtl: asset('boy/boy.mtl')
+      }}
+      style={{transform:[
+        {translate: [-1.5, -5, -8.5]},
+        { scaleX: 1.5 },
+        { scaleY: 1.5 },
+        { scaleZ: 1.5 },
+        ]}}
+         />
+    );
+  }
+};
+
+
+
+export class boy4 extends React.Component {
+  render() {
+    return (
+      <Entity source={{ 
+        obj: asset('boy/boy.obj'),
+        mtl: asset('boy/boy.mtl')
+      }}
+      style={{transform:[
+        {translate: [3.5, -5, -8.5]},
+        { scaleX: 1.5 },
+        { scaleY: 1.5 },
+        { scaleZ: 1.5 },
+        ]}}
+         />
+    );
+  }
+};
+/*
+
+const { AudioModule } = NativeModules;
+
+const player = r360.compositor.createVideoPlayer('myplayer');
+
+
+export default class Info extends PureComponent {
+  handleClick = () => {
+    Environment.setBackground(
+      asset('others/image.jpg'),
+      {format: '2D'}, 
+    );
+     player.setSource('path/to/video.mp4', '2D');
+
+    AudioModule.playOneShot({
+      source: asset('ray-gun.wav'),
+    });
+  };
+}
+*/
 
 export class hey360 extends React.Component {
   render() {
@@ -63,7 +163,12 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('hello360', () => hello360);
+AppRegistry.registerComponent('table', () => table);
+
+AppRegistry.registerComponent('boy1', () => boy1);
+AppRegistry.registerComponent('boy2', () => boy2);
+AppRegistry.registerComponent('boy3', () => boy3);
+AppRegistry.registerComponent('boy4', () => boy4);
 AppRegistry.registerComponent('hey360', () => hey360);
 AppRegistry.registerComponent('ModelOne', () => ModelOne);
 AppRegistry.registerComponent('Sphere', () => Sphere);

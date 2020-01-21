@@ -1,7 +1,7 @@
 // This file contains the boilerplate to execute your React app.
 // If you want to modify your application's content, start in "index.js"
 
-import { ReactInstance, Location, Surface } from 'react-360-web';
+import { ReactInstance, Surface } from 'react-360-web';
 
 function init(bundle, parent, options = {}) {
 
@@ -24,12 +24,36 @@ function init(bundle, parent, options = {}) {
   );
 
 
-r360.detachRoot(location0);
-myboy= r360.renderToLocation(
-    r360.createRoot('hello360', { /* initial props boy */ }),
-    location0
-      );
-  myboy.Location= new Location([-4,0,0],[0,0,0]);
+//r360.detachRoot(location0);
+
+table= r360.renderToLocation(
+  r360.createRoot('table', { /* initial props boy1 */ }),
+  location0
+    );
+
+    myboy1= r360.renderToLocation(
+      r360.createRoot('boy1', { /* initial props boy1 */ }),
+      location0
+        );
+
+    myboy2= r360.renderToLocation(
+  r360.createRoot('boy2', { /* 
+     style={{transform:[
+    {translate: [-5.5, -3, -8.5]},
+    { scaleX: 0.7 },
+    { scaleY: 0.7 },
+    { scaleZ: 0.7 },
+    ]}}initial props boy2 */ }),
+  location0
+    );
+   myboy3= r360.renderToLocation(
+      r360.createRoot('boy3', { /* initial props boy1 */ }),
+      location0
+        );
+   myboy4= r360.renderToLocation(
+      r360.createRoot('boy4', { /* initial props boy1 */ }),
+          location0
+        );
 
 
   // Render a sphere (surface)
