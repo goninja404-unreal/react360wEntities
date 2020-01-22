@@ -42,9 +42,9 @@ export  class boy1 extends React.Component {
       }}
       style={{transform:[
         {translate: [-9.5, -5, -8.5]},
-        { scaleX: 1.5 },
-        { scaleY: 1.5 },
-        { scaleZ: 1.5 },
+        { scaleX: 1.8 },
+        { scaleY: 1.8 },
+        { scaleZ: 1.8 },
         ]}}
          />
     );
@@ -61,9 +61,9 @@ export class boy2 extends React.Component {
       }}
       style={{transform:[
         {translate: [-5.5, -5, -8.5]},
-        { scaleX: 1.5 },
-        { scaleY: 1.5 },
-        { scaleZ: 1.5 },
+        { scaleX: 1.6 },
+        { scaleY: 1.6 },
+        { scaleZ: 1.6 },
         ]}}
          />
     );
@@ -79,9 +79,9 @@ export class boy3 extends React.Component {
       }}
       style={{transform:[
         {translate: [-1.5, -5, -8.5]},
-        { scaleX: 1.5 },
-        { scaleY: 1.5 },
-        { scaleZ: 1.5 },
+        { scaleX: 1.4 },
+        { scaleY: 1.4 },
+        { scaleZ: 1.4 },
         ]}}
          />
     );
@@ -99,9 +99,9 @@ export class boy4 extends React.Component {
       }}
       style={{transform:[
         {translate: [3.5, -5, -8.5]},
-        { scaleX: 1.5 },
-        { scaleY: 1.5 },
-        { scaleZ: 1.5 },
+        { scaleX: 1.3 },
+        { scaleY: 1.3 },
+        { scaleZ: 1.3 },
         ]}}
          />
     );
